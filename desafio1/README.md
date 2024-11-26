@@ -22,7 +22,6 @@ Este projeto transforma o JSON de um ERP de restaurante em um banco de dados SQL
 - Validação do JSON.
 - Conversão para tabelas SQL.
 - Implementação de triggers e índices.
-- Testes automatizados para garantir a integridade dos dados e operações.
 
 ## Estrutura do Diretório
 - `docs/`: Documentação e esquemas.

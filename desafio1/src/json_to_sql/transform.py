@@ -1,17 +1,14 @@
 # Importações de bibliotecas
-
 import json
 import pandas as pd
 
 # Carregando o JSON
 # Observação: Caso o código seja executado em um ambiente diferente, ajuste o caminho do arquivo conforme necessário.
 # Exemplo do caminho atual: "desafio1/data/ERP.json"
-
 with open("desafio1/data/ERP.json", "r") as file:
     data = json.load(file)
 
 # Processando os dados JSON e criando tabelas
-
 # Tabela principal: GuestChecks
 guest_checks = []
 detail_lines = []
@@ -62,7 +59,6 @@ for check in data["guestChecks"]:
         })
 
 # Conversão para o formato DataFrames
-
 guest_checks_df = pd.DataFrame(guest_checks)
 detail_lines_df = pd.DataFrame(detail_lines)
 menu_items_df = pd.DataFrame(menu_items)

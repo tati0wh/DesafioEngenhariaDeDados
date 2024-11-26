@@ -14,7 +14,7 @@
 -- 6. Criação da 8: Tabela de Tipos de Pagamento (MediaTypes) para garantia de centralização e padronização dos tipos de pagamento no sistema. 
 -- 
 -- Este arquivo representa o esquema final do banco de dados e está pronto para ser executado no ambiente de produção.
--- Para maiores esclarecimentos, consulte o arquivo sql_tables_design.md contido em desafio1/docs/sql_tables_design.md.
+-- Para maiores esclarecimentos, consulte o arquivo sql_tables_final_schema.md contido em desafio1/docs/sql_tables_final_schema.md.
 -- =======================================================================
 
 -- 1: Tabela de Pedidos (GuestChecks)

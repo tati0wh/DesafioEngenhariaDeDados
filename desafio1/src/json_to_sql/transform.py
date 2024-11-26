@@ -1,3 +1,6 @@
+# Este código realiza o processamento de um arquivo JSON (nesse caso, ERP.JSON) contendo informações de um sistema de ponto de venda e o 
+# transforma em tabelas SQL, gerando um script SQL automaticamente (create_tables.sql).
+
 # Importações de bibliotecas
 import json
 import pandas as pd

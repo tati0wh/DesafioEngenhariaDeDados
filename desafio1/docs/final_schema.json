@@ -1,0 +1,137 @@
+
+
+    {
+      "database": "CB_DB",
+      "tables": [
+        {
+          "name": "GuestChecks",
+          "columns": [
+            { "name": "guestCheckId", "type": "BIGINT", "constraints": ["PRIMARY KEY"] },
+            { "name": "checkNumber", "type": "INT", "constraints": ["NOT NULL"] },
+            { "name": "openBusinessDate", "type": "DATE" },
+            { "name": "openUtcTimestamp", "type": "TIMESTAMP" },
+            { "name": "openLocalTimestamp", "type": "TIMESTAMP" },
+            { "name": "closedBusinessDate", "type": "DATE" },
+            { "name": "closedUtcTimestamp", "type": "TIMESTAMP" },
+            { "name": "closedLocalTimestamp", "type": "TIMESTAMP" },
+            { "name": "lastTransactionUtc", "type": "TIMESTAMP" },
+            { "name": "lastTransactionLocal", "type": "TIMESTAMP" },
+            { "name": "lastUpdatedUtc", "type": "TIMESTAMP" },
+            { "name": "lastUpdatedLocal", "type": "TIMESTAMP" },
+            { "name": "isClosed", "type": "BOOLEAN", "default": false },
+            { "name": "guestCount", "type": "INT", "default": 0, "constraints": ["CHECK (guestCount >= 0)"] },
+            { "name": "subtotal", "type": "DECIMAL(15,2)", "default": 0 },
+            { "name": "nonTaxableSalesTotal", "type": "DECIMAL(15,2)", "default": null },
+            { "name": "checkTotal", "type": "DECIMAL(15,2)", "default": 0 },
+            { "name": "discountTotal", "type": "DECIMAL(15,2)", "default": 0 },
+            { "name": "paymentTotal", "type": "DECIMAL(15,2)", "default": 0 },
+            { "name": "balanceDueTotal", "type": "DECIMAL(15,2)", "default": null },
+            { "name": "revenueCenterNumber", "type": "INT" },
+            { "name": "operationTypeNumber", "type": "INT" },
+            { "name": "tableNumber", "type": "INT" },
+            { "name": "tableName", "type": "VARCHAR(50)" },
+            { "name": "employeeNumber", "type": "INT" },
+            { "name": "serviceRoundsCount", "type": "INT", "default": 0 },
+            { "name": "checksPrintedCount", "type": "INT", "default": 0 },
+            { "name": "createdAt", "type": "TIMESTAMP", "default": "CURRENT_TIMESTAMP" },
+            { "name": "updatedAt", "type": "TIMESTAMP", "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP" }
+          ],
+          "indexes": [
+            { "name": "idx_guestChecks_checkNumber", "columns": ["checkNumber"] },
+            { "name": "idx_guestChecks_closedUtcTimestamp", "columns": ["closedUtcTimestamp"] }
+          ]
+        },
+        {
+          "name": "CheckTaxes",
+          "columns": [
+            { "name": "taxId", "type": "SERIAL", "constraints": ["PRIMARY KEY"] },
+            { "name": "guestCheckId", "type": "BIGINT", "constraints": ["NOT NULL", "FOREIGN KEY REFERENCES GuestChecks(guestCheckId)"] },
+            { "name": "taxNumber", "type": "INT", "constraints": ["NOT NULL"] },
+            { "name": "taxableSalesTotal", "type": "DECIMAL(15,2)", "default": 0, "constraints": ["CHECK (taxableSalesTotal >= 0)"] },
+            { "name": "taxCollectedTotal", "type": "DECIMAL(15,2)", "default": 0, "constraints": ["CHECK (taxCollectedTotal >= 0)"] },
+            { "name": "taxRate", "type": "DECIMAL(5,3)", "constraints": ["NOT NULL", "CHECK (taxRate >= 0)"] },
+            { "name": "taxType", "type": "INT" }
+          ]
+        },
+        {
+          "name": "CheckDetailLines",
+          "columns": [
+            { "name": "detailLineId", "type": "BIGINT", "constraints": ["PRIMARY KEY"] },
+            { "name": "guestCheckId", "type": "BIGINT", "constraints": ["FOREIGN KEY REFERENCES GuestChecks(guestCheckId)"] },
+            { "name": "revenueCenterNumber", "type": "INT" },
+            { "name": "lineNumber", "type": "INT" },
+            { "name": "detailId", "type": "INT" },
+            { "name": "detailUtcTimestamp", "type": "TIMESTAMP" },
+            { "name": "detailLocalTimestamp", "type": "TIMESTAMP" },
+            { "name": "businessDate", "type": "DATE" },
+            { "name": "workstationNumber", "type": "INT" },
+            { "name": "displayTotal", "type": "DECIMAL(10,2)" },
+            { "name": "displayQuantity", "type": "INT" },
+            { "name": "aggregatedTotal", "type": "DECIMAL(10,2)" },
+            { "name": "aggregatedQuantity", "type": "INT" },
+            { "name": "checkEmployeeId", "type": "INT" },
+            { "name": "checkEmployeeNumber", "type": "INT" },
+            { "name": "serviceRoundNumber", "type": "INT" },
+            { "name": "seatNumber", "type": "INT" },
+            { "name": "createdAt", "type": "TIMESTAMP", "default": "CURRENT_TIMESTAMP" },
+            { "name": "updatedAt", "type": "TIMESTAMP", "default": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP" }
+          ],
+          "indexes": [
+            { "name": "idx_detailLines_guestCheckId", "columns": ["guestCheckId"] }
+          ]
+        },
+        {
+          "name": "MenuItems",
+          "columns": [
+            { "name": "menuItemId", "type": "INT", "constraints": ["PRIMARY KEY"] },
+            { "name": "detailLineId", "type": "BIGINT", "constraints": ["FOREIGN KEY REFERENCES CheckDetailLines(detailLineId)"] },
+            { "name": "modifiedFlag", "type": "BOOLEAN" },
+            { "name": "includedTax", "type": "DECIMAL(10,2)" },
+            { "name": "activeTaxes", "type": "INT" },
+            { "name": "priceLevel", "type": "INT" }
+          ]
+        },
+        {
+          "name": "Discounts",
+          "columns": [
+            { "name": "discountId", "type": "SERIAL", "constraints": ["PRIMARY KEY"] },
+            { "name": "detailLineId", "type": "BIGINT", "constraints": ["FOREIGN KEY REFERENCES CheckDetailLines(detailLineId)"] },
+            { "name": "discountAmount", "type": "DECIMAL(10,2)", "constraints": ["CHECK (discountAmount <= 0)"] }
+          ]
+        },
+        {
+          "name": "ServiceCharges",
+          "columns": [
+            { "name": "serviceChargeId", "type": "SERIAL", "constraints": ["PRIMARY KEY"] },
+            { "name": "detailLineId", "type": "BIGINT", "constraints": ["FOREIGN KEY REFERENCES CheckDetailLines(detailLineId)"] },
+            { "name": "chargeAmount", "type": "DECIMAL(10,2)" }
+          ]
+        },
+        {
+          "name": "TenderMedia",
+          "columns": [
+            { "name": "tenderMediaId", "type": "SERIAL", "constraints": ["PRIMARY KEY"] },
+            { "name": "guestCheckId", "type": "BIGINT", "constraints": ["FOREIGN KEY REFERENCES GuestChecks(guestCheckId)"] },
+            { "name": "mediaTypeId", "type": "INT", "constraints": ["FOREIGN KEY REFERENCES MediaTypes(mediaTypeId)"] },
+            { "name": "amount", "type": "DECIMAL(10,2)" }
+          ]
+        },
+        {
+          "name": "MediaTypes",
+          "columns": [
+            { "name": "mediaTypeId", "type": "SERIAL", "constraints": ["PRIMARY KEY"] },
+            { "name": "mediaTypeName", "type": "VARCHAR(50)" }
+          ]
+        },
+        {
+          "name": "ErrorCodes",
+          "columns": [
+            { "name": "errorCodeId", "type": "SERIAL", "constraints": ["PRIMARY KEY"] },
+            { "name": "detailLineId", "type": "BIGINT", "constraints": ["FOREIGN KEY REFERENCES CheckDetailLines(detailLineId)"] },
+            { "name": "errorCode", "type": "INT" },
+            { "name": "errorDescription", "type": "VARCHAR(255)" },
+            { "name": "errorTimestamp", "type": "TIMESTAMP", "default": "CURRENT_TIMESTAMP" }
+          ]
+        }
+      ]
+    }

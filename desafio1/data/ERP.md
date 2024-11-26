@@ -1,11 +1,11 @@
-Nível Raiz
-curUTC: String - Data e hora atual em formato UTC (ISO 8601).
-locRef: String - Referência do local (identificador textual).
-guestChecks: Lista de objetos - Contém os registros de contas de convidados.
-Objeto guestChecks
-Uma lista onde cada item representa um registro de uma conta de convidado com os seguintes campos:
+## Nível Raiz
+- curUTC: String - Data e hora atual em formato UTC (ISO 8601).
+- locRef: String - Referência do local (identificador textual).
+- guestChecks: Lista de objetos - Contém os registros de contas de convidados.
 
-guestCheckId: Inteiro - Identificador único da conta.
+## Objeto guestChecks
+Uma lista onde cada item representa um registro de uma conta de convidado com os seguintes campos:
+- guestCheckId: Inteiro - Identificador único da conta.
 chkNum: Inteiro - Número da conta.
 opnBusDt: String - Data de abertura da conta (formato "AAAA-MM-DD").
 opnUTC: String - Data e hora de abertura da conta em UTC (ISO 8601).

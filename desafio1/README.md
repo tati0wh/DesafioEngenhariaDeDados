@@ -30,12 +30,11 @@ Este projeto transforma o JSON de um ERP de restaurante em um banco de dados SQL
 - `tests/`: Testes automatizados.
 - `data/`: Arquivos de dados fornecidos.
 - `README.md`: Este arquivo.
-- `kanban.md`: Kanban textual para organização do projeto.
 
 ## Kanban
 ![Kanban](docs/kanban_board.png)
 
-Para mais detalhes, veja [kanban.md](kanban.md).
+Para mais detalhes, veja [kanban.md]([kanban.md](https://github.com/tati0wh/DesafioEngenhariaDeDados/blob/main/desafio1/docs/kanban.md)).
 
 ## Como Executar
 1. Instale as dependências:

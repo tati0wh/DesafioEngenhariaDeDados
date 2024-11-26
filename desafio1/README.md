@@ -1,4 +1,4 @@
-DESAFIO 1
+# DESAFIO 1
 
 A resposta de um determinado endpoint de API de ERP para uma loja de um restaurante está no arquivo ERP.json. Este exemplo corresponde a um determinado pedido (guestCheckId) com um único item (guestCheckLineItemId), referente a um único item de menu (menuItem).
 
@@ -16,8 +16,6 @@ Transcreva o JSON para tabelas SQL. A implementação deve fazer sentido para op
   3. Descreva a abordagem escolhida em detalhes. Justifique a escolha.
 
 ---------
-
-# Desafio 1: ERP → SQL
 
 ## Visão Geral
 Este projeto transforma o JSON de um ERP de restaurante em um banco de dados SQL estruturado. O fluxo inclui:

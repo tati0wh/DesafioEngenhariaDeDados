@@ -31,7 +31,7 @@ Este projeto transforma o JSON de um ERP de restaurante em um banco de dados SQL
 - `README.md`: Este arquivo.
 
 ## Kanban
-![Kanban](https://github.com/users/tati0wh/projects/1/views/1)
+![Kanban: GitHub][https://github.com/users/tati0wh/projects/1/views/1]
 
 Para mais detalhes, veja [kanban.md](https://github.com/tati0wh/DesafioEngenhariaDeDados/blob/main/desafio1/docs/kanban.md).
 

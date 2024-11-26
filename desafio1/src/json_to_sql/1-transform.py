@@ -79,7 +79,7 @@ menu_items_sql = dataframe_to_sql(menu_items_df, "MenuItems")
 taxes_sql = dataframe_to_sql(taxes_df, "Taxes")
 
 # Salvando no arquivo create_tables.sql
-output_file = "src/json_to_sql/create_tables.sql"
+output_file = "src/json_to_sql/2-create_tables.sql"
 
 with open(output_file, "w") as f:
     f.write("-- SQL Script para tabela GuestChecks\n")

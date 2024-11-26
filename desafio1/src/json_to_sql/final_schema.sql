@@ -1,9 +1,11 @@
 -- =======================================================================
 -- FINAL_SCHEMA.SQL
 -- 
--- Este arquivo contém o esquema final do banco de dados para o ERP de restaurante, após a transformação do JSON original. As tabelas foram 
--- ajustadas, nomes foram modificados, e restrições (como chaves estrangeiras e verificações) foram implementadas para garantir a integridade 
--- dos dados e atender aos requisitos do projeto.
+-- Este arquivo contém o esquema final do banco de dados para o sistema ERP de restaurante. 
+-- O esquema foi inicialmente gerado automaticamente a partir do arquivo create_tables.sql, que foi produzido pelo script transform.py ao 
+-- processar o arquivo ERP.json.
+-- Posteriormente, ajustes foram realizados, incluindo a renomeação de tabelas e colunas, além da adição de restrições para garantir a integridade dos dados.
+-- Essas modificações visam atender aos requisitos do projeto e aprimorar a estrutura do banco de dados.
 -- 
 -- As alterações incluem:
 -- 1. Renomeação de tabelas e colunas para maior clareza e consistência.

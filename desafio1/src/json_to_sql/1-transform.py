@@ -44,7 +44,7 @@ for check in data["guestChecks"]:
         # Tabela de itens do menu: menuItems
         if "menuItem" in line:
             menu_items.append({
-                "guestCheckLineItemId": line["guestCheckLineItemId"],  # Foreign key
+                "guestCheckLineItemId": line["guestCheckLineItemId"],  
                 "miNum": line["menuItem"]["miNum"],
                 "modFlag": line["menuItem"]["modFlag"],
                 "inclTax": line["menuItem"]["inclTax"],

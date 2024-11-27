@@ -41,6 +41,9 @@ Este documento descreve as etapas realizadas durante o desenvolvimento do projet
   - O arquivo foi complementado com instruções detalhadas sobre o pipeline, as tabelas SQL geradas e a finalidade de cada arquivo no repositório.
 - Elaboração do kanban.md e sua inclusão no repositório
   - Este documento foi criado para descrever o fluxo de atividades e organizar as etapas realizadas.
+- Criação do documento sql_tables_final_schema.md
+  - Foi detalhado as explicações do esquema final das tabelas
+  - Foi criado utilizando como base o arquivo create_tables.sql com ajustes e adições de instâncias.
 
 # Conclusão
 Com a conclusão de todas as tarefas acima, o projeto foi entregue com um pipeline funcional e modular para transformar dados JSON em tabelas SQL. A estrutura do repositório foi organizada de forma clara, possibilitando fácil manutenção e evolução futura.

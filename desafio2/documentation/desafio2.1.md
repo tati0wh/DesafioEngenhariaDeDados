@@ -1,5 +1,6 @@
 1.	Por que armazenar as respostas das APIs?
 Armazenar as respostas das APIs em um data lake serve a diversos propósitos importantes:
+
 •	Torna os dados brutos APIs disponíveis prontamente, permitindo análises, transformações e relatórios adicionais, sem a necessidade de chamar as APIs repetidamente.
 •	Armazenamento das respostas preserva os dados originais, caso os endpoints das APIs ou os formatos de resposta mudem no futuro, o que poderia impactar o processamento downstream.
 •	O data lake fornece um repositório centralizado para auditar os dados recebidos das APIs, o que é crucial para requisitos regulatórios e de conformidade internos e externos.

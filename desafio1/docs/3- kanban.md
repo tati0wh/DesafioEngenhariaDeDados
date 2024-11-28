@@ -14,7 +14,7 @@ Este documento descreve as etapas realizadas durante o desenvolvimento do projet
   - Foi criada a estrutura inicial do repositório, com os seguintes diretórios:
     - docs/ para documentação do projeto.
     - src/json_to_sql/ para o código e scripts SQL.
-    - data/ para arquivos de entrada e suas descrições.
+    - data/ para o arquivo ERP.json e sua explicação.
     - Arquivo README.md para centralizar as informações iniciais.
 
 ## Execução

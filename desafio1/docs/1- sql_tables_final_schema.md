@@ -38,12 +38,12 @@ Estrutura e justificativas:
 - Semântica separada: Optou-se por uma tabela distinta para diferenciar taxas de serviço de descontos, reforçando a clareza funcional do banco.
 - Chave estrangeira (detailLineId): Relaciona cada taxa de serviço a um detalhe de pedido específico.
 
-8. Tabela de Pagamentos (TenderMedia)
+7. Tabela de Pagamentos (TenderMedia)
 Estrutura e justificativas:
 - Relacionamento com tipos de pagamento (MediaTypes): Foi criada uma relação com a tabela MediaTypes para centralizar os métodos de pagamento.
 - Campos financeiros (amount): Valores pagos foram definidos como DECIMAL(10,2) para garantir precisão e compatibilidade com diferentes moedas.
 
-9. Tabela de Tipos de Pagamento (MediaTypes)
+8. Tabela de Tipos de Pagamento (MediaTypes)
 Estrutura e justificativas:
 A tabela MediaTypes foi adicionada ao esquema como uma melhoria em relação ao design original para padronizar os métodos de pagamento utilizados no sistema. Essa centralização permite:
 - Consistência nos dados: Métodos de pagamento como "Cartão de Crédito" ou "Dinheiro" são padronizados, reduzindo redundâncias e erros.

@@ -1,4 +1,4 @@
-# Introdução
+# Kanban - Fluxo de Atividades do Projeto
 Este documento apresenta os detalhes do desenvolvimento do Desafio 2, no qual a tarefa central foi projetar uma estrutura de armazenamento de dados obtidos de APIs em um data lake. O objetivo era permitir manipulação eficiente dos dados, além de prever possíveis alterações nos esquemas das respostas das APIs.
 
 ## Planejamento
@@ -26,11 +26,3 @@ Após a execução, foram feitas as revisões finais:
 - Atualização do README.md: Ajuste nas descrições gerais com base nas decisões tomadas durante o planejamento e execução.
 - Revisão do kanban.md: Inclusão de detalhes adicionais sobre os processos realizados e as lições aprendidas.
 - Revisão da parte escrita das questões
-
-
-
-Os principais aprendizados incluem:
-
-A importância de uma estrutura escalável para armazenamento de dados.
-A necessidade de flexibilidade no planejamento de ETLs, considerando mudanças nos esquemas das APIs.
-A documentação detalhada como suporte para possíveis melhorias ou manutenções futuras.

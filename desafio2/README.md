@@ -37,6 +37,6 @@ Este projeto visa armazenar e organizar as respostas de APIs relacionadas à an�
 - `README.md`: Este arquivo, com visão geral do projeto.
 
 ## Kanban
-[Acesse o Kanban no GitHub](ADICIONAR LINK)
+[Acesse o Kanban no GitHub](https://github.com/users/tati0wh/projects/2/views/1)
 
-Para mais detalhes sobre o fluxo e tarefas, veja [kanban.md](ADICIONAR AQUI).
+Para mais detalhes sobre o fluxo e tarefas, veja [kanban.md](https://github.com/tati0wh/DesafioEngenhariaDeDados/blob/main/desafio2/kanban.md).

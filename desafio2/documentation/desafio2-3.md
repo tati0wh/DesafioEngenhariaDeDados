@@ -20,5 +20,5 @@ implicaria?
   
    - Manter uma documentação abrangente sobre a estrutura do data lake, os pipelines de processamento e quaisquer alterações de esquema, para facilitar a manutenção e atualização.
   
-  Seguindo essas práticas, o impacto de mudanças no formato de resposta da API pode ser minimizado, e o data lake pode continuar sendo uma fonte confiável e resiliente de informações para a equipe de inteligência de negócios.
+        Seguindo essas práticas, o impacto de mudanças no formato de resposta da API pode ser minimizado, e o data lake pode continuar sendo uma fonte confiável e resiliente de informações para a equipe de inteligência de negócios.
 

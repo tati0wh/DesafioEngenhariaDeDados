@@ -25,7 +25,7 @@ Este projeto transforma o JSON de um ERP de restaurante em um banco de dados SQL
 
 ## Estrutura do Diretório
 - `data/`: Arquivos de dados fornecidos.
-- `docs/`: Documentação e esquemas feitos.
+- `docs/`: Arquivo ERP.json e sua explicação.
 - `src/`: Códigos e esquema final de SQL.
 - `README.md`: Este arquivo.
 

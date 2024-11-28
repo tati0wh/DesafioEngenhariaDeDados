@@ -16,9 +16,6 @@ buscas e pesquisas rápidas.
 implicaria?
 
 ---
-
-# README.md
-
 ## Visão Geral
 Este projeto visa armazenar e organizar as respostas de APIs relacionadas à análise de receita de uma rede de restaurantes em um **data lake** estruturado. O fluxo inclui:
 - Armazenamento das respostas das APIs em formato JSON.

@@ -1,0 +1,40 @@
+{
+    "requests": [
+      {
+        "endpoint": "/bi/getFiscalInvoice",
+        "payload": {
+          "busDt": "2024-11-27",
+          "storeId": "123"
+        }
+      },
+      {
+        "endpoint": "/res/getGuestChecks",
+        "payload": {
+          "busDt": "2024-11-27",
+          "storeId": "123"
+        }
+      },
+      {
+        "endpoint": "/org/getChargeBack",
+        "payload": {
+          "busDt": "2024-11-27",
+          "storeId": "123"
+        }
+      },
+      {
+        "endpoint": "/trans/getTransactions",
+        "payload": {
+          "busDt": "2024-11-27",
+          "storeId": "123"
+        }
+      },
+      {
+        "endpoint": "/inv/getCashManagementDetails",
+        "payload": {
+          "busDt": "2024-11-27",
+          "storeId": "123"
+        }
+      }
+    ]
+  }
+  

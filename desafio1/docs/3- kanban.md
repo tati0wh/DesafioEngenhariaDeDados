@@ -7,9 +7,9 @@ Este documento descreve as etapas realizadas durante o desenvolvimento do projet
   - Os principais elementos identificados foram: guestCheckId, guestCheckLineItemId e detailLines, que podem conter diferentes tipos de objetos (menuItem, discount, etc.).
 - Planejamento do pipeline de transformação JSON → SQL
   - Foi estruturado um pipeline dividido em três etapas principais:
-  1 -Transformação do JSON em um esquema SQL intermediário.
-  2- Geração de scripts automáticos para criação de tabelas no banco de dados.
-  3- Refinamento e customização do esquema SQL final.
+    - 1 -Transformação do JSON em um esquema SQL intermediário.
+    - 2- Geração de scripts automáticos para criação de tabelas no banco de dados.
+    - 3- Refinamento e customização do esquema SQL final.
 - Estruturação inicial do repositório no GitHub
   - Foi criada a estrutura inicial do repositório, com os seguintes diretórios:
     - docs/ para documentação do projeto.

@@ -16,25 +16,40 @@ buscas e pesquisas rápidas.
 implicaria?
 
 ---
-## Visão Geral
-Este projeto visa armazenar e organizar as respostas de APIs relacionadas à análise de receita de uma rede de restaurantes em um **data lake** estruturado. O fluxo inclui:
-- Armazenamento das respostas das APIs em formato JSON.
-- Organização das respostas em uma estrutura de pastas lógica e eficiente.
-- Preparação para manipulação e análise posterior, incluindo versionamento e transformação de dados em caso de mudanças nos endpoints.
+## Visão geral
+Este repositório contém o desenvolvimento do Desafio 2 relacionado à integração e análise de dados provenientes de múltiplos endpoints de API. O objetivo principal é coletar, armazenar e organizar as respostas das APIs em um Data Lake, garantindo que os dados estejam disponíveis para futuras análises de inteligência de negócios (BI).
 
-## Estrutura do Diretório
-- `data_lake_CB/`: Diretório principal do data lake com as subpastas organizadas por tipo de dados e endpoints.
-  - **bi/**: Dados de inteligência de negócios.
+Estrutura do Repositório
+1. documentation/
+Contém arquivos detalhando o desafio e a estrutura dos dados:
+
+- desafio2-1.md: Justifica a importância de armazenar respostas das APIs e fornece exemplos detalhados.
+- desafio2-2.txt: Descreve a estrutura de pastas proposta para o Data Lake.
+- desafio2-3.md: Analisa os impactos de alterações nos formatos de resposta das APIs.
+- endpoints-API.json: Arquivo JSON contendo informações detalhadas sobre os endpoints usados no desafio, criado a partir da tabela fornecida.
+
+Os endpoints são compostos por:
+  - `data_lake_CB/`: Diretório principal do data lake com as subpastas organizadas por tipo de dados e endpoints.
+    - **bi/**: Dados de inteligência de negócios.
     - **getFiscalInvoice/**: Respostas relacionadas a notas fiscais.
     - **getGuestChecks/**: Respostas relacionadas a registros de vendas.
     - **getChargeBack/**: Respostas relacionadas a chargebacks.
   - **res/**: Dados relacionados a transações.
     - **getTransactions/**: Respostas com detalhes de transações.
   - **inv/**: Dados financeiros.
-    - **getCashManagementDetails/**: Respostas com detalhes de gestão de caixa.
-      
-- `documentation/`: Arquivos com as respostas específicas para cada questão.
-- `README.md`: Este arquivo, com visão geral do projeto.
+    - **getCashManagementDetails/**: Respostas com detalhes de gestão de caixa. 
+
+2. kanban.md
+Arquivo que detalha a gestão do projeto por meio de um Kanban, incluindo tarefas concluídas, em andamento e futuras.
+
+3. README.md
+O documento que você está lendo agora! Contém uma visão geral do projeto e informações para ajudar colaboradores e usuários a entenderem o contexto e propósito do repositório.
+
+Objetivos do Projeto
+Integração de Dados: Consome múltiplos endpoints de API relacionados a operações financeiras e comerciais de uma rede de restaurantes.
+Armazenamento Estruturado: Organiza as respostas das APIs em um Data Lake com uma estrutura que facilita manipulações e buscas.
+Flexibilidade e Manutenção: Prepara o sistema para mudanças futuras nos formatos de resposta das APIs, garantindo resiliência.
+
 
 ## Kanban
 [Acesse o Kanban no GitHub](https://github.com/users/tati0wh/projects/2/views/1)

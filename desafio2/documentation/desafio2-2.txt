@@ -1,7 +1,7 @@
 2. Como armazenar as respostas das APIs?
 Para armazenar e gerenciar eficientemente as respostas das APIs, podemos usar uma estrutura de pastas no data lake que organize os dados 
 por endpoint da API e timestamp. Essa estrutura permitiria uma fácil recuperação, consulta e rastreamento de mudanças ao longo do tempo.
-data_lake/
+data_lake_CB/
 ├── bi/
 │   ├── getFiscalInvoice/
 │   │   ├── 2023-04-01/

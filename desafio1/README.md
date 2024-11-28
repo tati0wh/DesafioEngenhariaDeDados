@@ -24,9 +24,9 @@ Este projeto transforma o JSON de um ERP de restaurante em um banco de dados SQL
 - Implementação de triggers e índices.
 
 ## Estrutura do Diretório
-- `docs/`: Documentação e esquemas.
-- `src/`: Código principal, incluindo transformação JSON → SQL.
 - `data/`: Arquivos de dados fornecidos.
+- `docs/`: Documentação e esquemas feitos.
+- `src/`: Códigos e esquema final de SQL.
 - `README.md`: Este arquivo.
 
 ## Kanban

@@ -1,3 +1,6 @@
+3. Considere que a resposta do endpoint getGuestChecks foi alterada, por exemplo, guestChecks.taxes foi renomeado para guestChecks.taxation. O que isso
+implicaria?
+
 Se o formato de resposta da API mudar, como o campo "guestChecks.taxes" sendo renomeado para "guestChecks.taxation", teria as seguintes implicações:
 
 •	Os dados existentes no data lake precisariam ser atualizados ou migrados para corresponder ao novo formato. Isso poderia envolver a criação de scripts personalizados ou o uso de ferramentas de transformação de dados para atualizar os arquivos JSON armazenados.

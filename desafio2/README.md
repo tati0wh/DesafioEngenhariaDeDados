@@ -28,7 +28,7 @@ Contém arquivos detalhando o desafio e a estrutura dos dados:
 - desafio2-3.md: Analisa os impactos de alterações nos formatos de resposta das APIs.
 - endpoints-API.json: Arquivo JSON contendo informações detalhadas sobre os endpoints usados no desafio, criado a partir da tabela fornecida.
 
-Os endpoints são compostos por:
+  Os endpoints são compostos por:
   - `data_lake_CB/`: Diretório principal do data lake com as subpastas organizadas por tipo de dados e endpoints.
     - **bi/**: Dados de inteligência de negócios.
     - **getFiscalInvoice/**: Respostas relacionadas a notas fiscais.
